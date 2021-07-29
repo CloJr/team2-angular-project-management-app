@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
+import {Task} from '../../Task';
 
 @Component({
   selector: 'app-lists-details',
@@ -6,6 +7,8 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./lists-details.component.css']
 })
 export class ListsDetailsComponent implements OnInit {
+  @Input() task: Task
+
 
   constructor() { }
 
