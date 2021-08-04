@@ -4,8 +4,13 @@
   (dblclick)="onToggle(task)"
 >
   <h3>
+    <fa-icon id="completeButton"
+    (click)="onCompleted(task)"
+    [ngStyle]="{ color: 'green' }"
+    [icon]="faCheck">
+</fa-icon>
     {{ task.text }}
-    <fa-icon
+    <fa-icon id="deleteButton"
       (click)="onDelete(task)"
       [ngStyle]="{ color: 'red' }"
       [icon]="faTimes"
