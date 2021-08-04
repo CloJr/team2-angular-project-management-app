@@ -15,6 +15,7 @@ import { ButtonComponent } from './components/button/button.component';
 import { AddTaskComponent } from './components/add-task/add-task.component';
 import { AboutComponent } from './components/about/about.component';
 import { FooterComponent } from './components/footer/footer.component';
+import { SidebarComponent } from './sidebar/sidebar.component';
 
 const appRoutes: Routes = [
   {path: '', component: ListsComponent},
@@ -32,7 +33,8 @@ const appRoutes: Routes = [
     ButtonComponent,
     AddTaskComponent,
     AboutComponent,
-    FooterComponent
+    FooterComponent,
+    SidebarComponent
   ],
   imports: [
     BrowserModule,
