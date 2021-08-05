@@ -25,5 +25,13 @@
         <input type="checkbox" name="reminder" [(ngModel)]="reminder" id="reminder" />
    </div>
 -->
+  <div class="from-control">
+    <label for="categories">Add a Category</label>
+    <select name="categories" id="categories">
+      <option value="Internal Comms App">Internal Comms App</option>
+      <option value="General Work">General Work</option>
+      <option value="Other">Other</option>
+    </select>
+  </div>
   <input type="submit" value="Save Task" class="btn-block" />
 </form>
