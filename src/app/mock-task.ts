@@ -23,3 +23,36 @@ export const TASKS: Task[] = [
   //   completed:false
   // },
 ];
+
+// {
+//   "tasks": [
+//     {
+//       "text": "test",
+//       "day": "August 10th at 12:00pm",
+//       "reminder": false,
+//       "completed": false,
+//       "id": 1
+//     },
+//     {
+//       "text": "review report",
+//       "day": "August 11th at 11:30am",
+//       "reminder": false,
+//       "completed": false,
+//       "id": 2
+//     },
+//     {
+//       "text": "send account invitation",
+//       "day": "August 11th at 1:00pm",
+//       "reminder": false,
+//       "completed": false,
+//       "id": 3
+//     },
+//     {
+//       "text": "Email Professor",
+//       "day": "August 8th at 2:00pm",
+//       "reminder": false,
+//       "completed": false,
+//       "id": 4
+//     }
+//   ]
+// }

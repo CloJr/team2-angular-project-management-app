@@ -1,5 +1,5 @@
 <form *ngIf="showAddTask" class="add-form" (ngSubmit)="onSubmit()">
-  <div class="from-control">
+  <div class="form-control">
     <label for="text">Task</label>
     <input
       type="text"
@@ -9,7 +9,7 @@
       placeholder="Add Task"
     />
   </div>
-  <div class="from-control">
+  <div class="form-control">
     <label for="day">Day & Time</label>
     <input
       type="text"
@@ -25,7 +25,7 @@
         <input type="checkbox" name="reminder" [(ngModel)]="reminder" id="reminder" />
    </div>
 -->
-<div class="from-control">
+<div class="form-control">
   <label for="categories">Add a Category</label>
   <select name="categories" id="categories">
     <option value="Internal Comms App">Internal Comms App</option>
@@ -33,5 +33,5 @@
     <option value="Other">Other</option>
   </select>
 </div>
-  <input type="submit" value="Save Task" class="btn-block" />
+  <input type="submit" value="Save Task" class="btn btn-block" />
 </form>

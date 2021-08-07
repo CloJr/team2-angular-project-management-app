@@ -1,7 +1,11 @@
-<div
+<!-- <div
   [ngClass]="{ reminder: task.reminder }"
   class="task"
   (dblclick)="onToggle(task)"
+> -->
+<div
+  [ngClass]="{ reminder: task.reminder }"
+  class="task"
 >
   <h3>
     <fa-icon id="completeButton"
@@ -18,3 +22,4 @@
   </h3>
   <p>{{ task.day }}</p>
 </div>
+
