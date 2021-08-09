@@ -15,10 +15,17 @@ import { AddTaskComponent } from './components/add-task/add-task.component';
 import { AboutComponent } from './components/about/about.component';
 import { FooterComponent } from './components/footer/footer.component';
 import { SidebarComponent } from './sidebar/sidebar.component';
+import { InternalCommsAppComponent } from './components/internal-comms-app/internal-comms-app.component';
+import { GeneralWorkComponent } from './components/general-work/general-work.component';
+import { OtherComponent } from './components/other/other.component';
+import { componentFactoryName } from '@angular/compiler';
 
 const appRoutes: Routes = [
   {path: '', component: ListsComponent},
   {path: 'about', component: AboutComponent },
+  {path: 'internal', component: InternalCommsAppComponent},
+  {path: 'general', component: GeneralWorkComponent},
+  {path: 'other', component: OtherComponent}
 ];
 
 
@@ -33,7 +40,10 @@ const appRoutes: Routes = [
     AddTaskComponent,
     AboutComponent,
     FooterComponent,
-    SidebarComponent
+    SidebarComponent,
+    InternalCommsAppComponent,
+    GeneralWorkComponent,
+    OtherComponent
   ],
   imports: [
     BrowserModule,

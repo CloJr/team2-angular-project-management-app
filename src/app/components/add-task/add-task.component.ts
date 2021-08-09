@@ -17,6 +17,7 @@ export class AddTaskComponent implements OnInit {
   showAddTask: boolean;
   subscription: Subscription;
   completed: boolean = false;
+  categories: string;
 
   constructor(private uiService: UiService) { 
     this.subscription = this.uiService.onToggle().subscribe((value) => (this.showAddTask = value));
@@ -35,14 +36,16 @@ export class AddTaskComponent implements OnInit {
       day: this.day,
       reminder: this.reminder,
       completed: this.completed,
+      categories: this.categories,
     }
 
     this.onAddTask.emit(newTask);
-
+    
     this.text = '';
     this.day = '';
     this.reminder = false;
     this.completed = false;
+    this.categories = '';
     
   }
 
