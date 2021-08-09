@@ -7,7 +7,6 @@ import { RouterModule, Routes } from '@angular/router';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { ComponentsComponent } from './components/components.component';
 import { ListsComponent } from './components/lists/lists.component';
 import { ListsDetailsComponent } from './components/lists-details/lists-details.component';
 import { HeaderComponent } from './components/header/header.component';

@@ -11,10 +11,12 @@ import { faTrashAlt } from '@fortawesome/free-solid-svg-icons';
 })
 
 export class ListsComponent implements OnInit {
-  tasks: Task[] = TASKS;
+  tasks: Task[] = [];
+
+
   faTrashAlt = faTrashAlt;
-  @Input() task: Task;
-  @Output() onAllDeleteTask: EventEmitter<Task> = new EventEmitter();
+  // @Input() task: Task;
+  // @Output() onAllDeleteTask: EventEmitter<Task> = new EventEmitter();
   
   constructor(private taskService: TaskService) { }
 
@@ -22,31 +24,53 @@ export class ListsComponent implements OnInit {
     this.taskService.getTasks().subscribe((tasks) => (this.tasks = tasks));
   }
   
-  deleteTask(task: Task){
-    this.taskService.deleteTask(task).subscribe(() => (this.tasks = this.tasks.filter
-      ((t)=> t.id !== task.id)));
-  }
-
+  
   toggleReminder(task: Task){
     task.reminder = !task.reminder;
     this.taskService.updateTaskReminder(task).subscribe();
   }
-
+  
   addTask(task: Task){
     this.taskService.addTask(task).subscribe((task) => (this.tasks.push(task)));
   }
-
+  
   completeTask(task: Task){
     task.reminder = !task.reminder;
     this.taskService.updateTaskReminder(task).subscribe();
   }
+  
+  // This is not currently going anywhere
+  // onalldelete(task){
+  //   this.onAllDeleteTask.emit(task);
+  //   console.log('123');
+  // }
+  
+  deleteTask(task: Task){
+    // This should just delete the task from the this.tasks[], and then update the service data, 
+   
+    
+    // this.taskService.deleteTask(task).subscribe()
+    //because of asynch, this is running concurrently with the line of code above, and then, it returns too fast
+    // this.taskService.getTasks().subscribe((tasks) => (this.tasks = tasks));
 
-  onalldelete(task){
-    this.onAllDeleteTask.emit(task);
-    console.log('123');
+
+    this.taskService.deleteTask(task).subscribe(() => (this.tasks = this.tasks.filter
+      ((t)=> t.id !== task.id)));
   }
 
-  deleteAllTask(task: Task){
-    this.taskService.deleteAllTask(task).subscribe(() => this.tasks);      
+  deleteAllTasks(){
+    console.log("So you have chosen death, now deleting all tasks")
+    for(let i = 0; i < this.tasks.length; i++){
+      // this.taskService.deleteTask(this.tasks[i])
+      this.deleteTask(this.tasks[i])
+    }
+console.log();
+
+    // this.taskService.deleteAllTask(task).subscribe(() => (this.tasks));      
   }
+
+  // editTask(task: Task){
+  //   this.taskService.editTask(task)
+  // }
+
 }

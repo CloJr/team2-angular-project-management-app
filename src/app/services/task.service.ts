@@ -14,6 +14,9 @@ const httpOptions = {
 })
 
 export class TaskService {
+
+ 
+
   private apiUrl = 'http://localhost:5000/tasks';
 
   constructor(private http:HttpClient) {}
@@ -21,10 +24,16 @@ export class TaskService {
   getTasks(): Observable<Task[]>
   {
     return this.http.get<Task[]>(this.apiUrl)
+
   }
 
-  deleteTask(task: Task): Observable<Task>{
+  // This is a delete method, its supposed to delete stuff, 
+  // But it is also an observable... and it has a task as its data, 
+  //
+  deleteTask(task: Task):Observable<Task>{
+    console.log(task, "Is going to be deleted");
     const url = `${this.apiUrl}/${task.id}`;
+   
     return this.http.delete<Task>(url);
   }
 
@@ -42,8 +51,9 @@ export class TaskService {
     return this.http.put<Task>(url, task, httpOptions);
   }
 
-  deleteAllTask(task: Task): Observable<Task>{
-    const url = `${this.apiUrl}/$`;
-    return this.http.delete<Task>(url);
-  }
+  // deleteAllTask(task: Task): Observable<Task>{
+  //   // const url = `${this.apiUrl}`;
+  //   // return this.http.delete<Task>(url);
+
+  // }
 }
