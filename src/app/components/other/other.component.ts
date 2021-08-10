@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { Task } from '../../Task';
+
 
 @Component({
   selector: 'app-other',

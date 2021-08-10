@@ -1,26 +1,26 @@
 {
   "tasks": [
     {
-      "text": "shopping ",
-      "day": "2021-08-10T03:33",
+      "text": "test1",
       "reminder": false,
       "completed": false,
+      "category": "internal",
       "id": 1
     },
     {
-      "text": "review report",
-      "day": "2021-08-04T17:38",
-      "reminder": true,
+      "text": "test2",
+      "day": "",
+      "reminder": false,
       "completed": false,
-      "categories": "",
+      "category": "general",
       "id": 2
     },
     {
-      "text": "send account invitation",
-      "day": "2021-08-06T09:12",
+      "text": "test3",
+      "day": "",
       "reminder": false,
       "completed": false,
-      "categories": "",
+      "category": "other",
       "id": 3
     }
   ]

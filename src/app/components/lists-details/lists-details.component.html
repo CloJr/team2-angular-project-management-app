@@ -3,24 +3,23 @@
   class="task"
   (dblclick)="onToggle(task)"
 > -->
-<div
-  [ngClass]="{ reminder: task.reminder }"
-  class="task"
->
+<div [ngClass]="{ reminder: task.reminder }" class="task">
   <h3>
-    <fa-icon id="completeButton"
-    (click)="onCompleted(task)"
-    [ngStyle]="{ color: 'green' }"
-    [icon]="faCheck">
-</fa-icon>
+    <fa-icon
+      id="completeButton"
+      (click)="onCompleted(task)"
+      [ngStyle]="{ color: 'green' }"
+      [icon]="faCheck"
+    >
+    </fa-icon>
     {{ task.text }}
-    <fa-icon id="deleteButton"
+    <fa-icon
+      id="deleteButton"
       (click)="onDelete(task)"
       [ngStyle]="{ color: 'red' }"
       [icon]="faTimes"
     ></fa-icon>
   </h3>
-  <p style="text-align: center;">{{ task.day }}</p>
-  <p>{{task.categories}}</p>
+  <p style="text-align: center">{{ task.day }}</p>
+  <p>{{ task.category }}</p>
 </div>
-

@@ -21,7 +21,19 @@ export class ListsComponent implements OnInit {
   constructor(private taskService: TaskService) { }
 
   ngOnInit(): void {
+    // Make an initial pull
     this.taskService.getTasks().subscribe((tasks) => (this.tasks = tasks));
+
+    // Listen for changes and filter as needed
+    this.taskService.taskCategory.subscribe(category => {
+      if (category === 'all') {
+        this.taskService.getTasks().subscribe((tasks) => (this.tasks = tasks));
+      } else {
+        this.taskService.getTasks().subscribe((tasks) => {
+          this.tasks = tasks.filter(task => task.category === category);
+        });
+      }
+    });
   }
   
   

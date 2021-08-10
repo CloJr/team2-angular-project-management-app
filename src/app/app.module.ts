@@ -1,4 +1,5 @@
 import { NgModule } from '@angular/core';
+import { CommonModule } from '@angular/common';
 import { BrowserModule } from '@angular/platform-browser';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import {HttpClientModule} from '@angular/common/http';
@@ -22,10 +23,10 @@ import { componentFactoryName } from '@angular/compiler';
 
 const appRoutes: Routes = [
   {path: '', component: ListsComponent},
-  {path: 'about', component: AboutComponent },
-  {path: 'internal', component: InternalCommsAppComponent},
-  {path: 'general', component: GeneralWorkComponent},
-  {path: 'other', component: OtherComponent}
+  // {path: 'about', component: AboutComponent },
+  // {path: 'internal', component: InternalCommsAppComponent},
+  // {path: 'general', component: GeneralWorkComponent},
+  // {path: 'other', component: OtherComponent}
 ];
 
 
@@ -47,6 +48,7 @@ const appRoutes: Routes = [
   ],
   imports: [
     BrowserModule,
+    CommonModule,
     // AppRoutingModule,
     FontAwesomeModule,
     HttpClientModule,

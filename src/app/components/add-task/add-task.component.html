@@ -11,27 +11,15 @@
   </div>
   <div class="form-control">
     <label for="day">Day & Time</label>
-    <!-- <input
-      type="text"
-      name="day"
-      [(ngModel)]="day"
-      id="day"
-      placeholder="Add Day & Time"
-    /> -->
     <input type="datetime-local" name="day" [(ngModel)]="day">
   </div>
-  <!--
-    <div class="from-control form-control-check">
-        <label for="reminder">Set Reminder</label>
-        <input type="checkbox" name="reminder" [(ngModel)]="reminder" id="reminder" />
-   </div>
--->
-<div class="form-control">
-  <label for="categories">Add a Category</label>
-  <select name="categories" id="categories" name="categories">
-    <option value="Internal Comms App">Internal Comms App</option>
-    <option value="General Work">General Work</option>
-    <option value="Other">Other</option>
+
+<div class="form-control"> 
+  <label for="category">Add a Category</label>
+  <select name="category" id="category" [(ngModel)]="category">
+    <option value="internal">Internal Comms App</option>
+    <option value="general">General Work</option>
+    <option value="other">Other</option>
   </select>
 </div>
   <input type="submit" value="Save Task" class="btn btn-block"/>

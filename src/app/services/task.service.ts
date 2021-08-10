@@ -1,7 +1,8 @@
 import { Injectable } from '@angular/core';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
-import { Observable } from 'rxjs';
+
 import { Task }  from '../Task';
+import { Observable, BehaviorSubject } from 'rxjs';
 
 const httpOptions = {
   headers: new HttpHeaders({
@@ -14,8 +15,9 @@ const httpOptions = {
 })
 
 export class TaskService {
-
   private apiUrl = 'http://localhost:5000/tasks';
+
+  public taskCategory: BehaviorSubject<string> = new BehaviorSubject<string>('all');
 
   constructor(private http:HttpClient) {}
 

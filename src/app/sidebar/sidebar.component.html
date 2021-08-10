@@ -1,11 +1,29 @@
 <!-- <nav class="navbar"> -->
-    <div class="sidebar">
-        <ul>
-            <h2 style="padding: 15px;">Categories</h2>
-            <ol><a routerLink="/">All</a></ol>
-            <ol><a routerLink="/internal">Internal comms app</a></ol>
-            <ol><a routerLink="/general">General work</a></ol>
-            <ol><a routerLink="/other">Other</a></ol>
-        </ul>
-    </div>
+<div class="sidebar">
+  <ul>
+    <h2 style="padding: 15px">category</h2>
+    <ol>
+      <a 
+        routerLink="/"
+        [queryParams]="{ category: 'all' }"
+        queryParamsHandling="merge">All</a>
+    </ol>
+    <ol>
+      <a routerLink="/" 
+      [queryParams]="{ category: 'internal' }"
+      queryParamsHandling="merge">Internal Comms App</a>
+    </ol>
+    <ol>
+      <a routerLink="/" 
+      [queryParams]="{ category: 'general' }"
+      queryParamsHandling="merge">General Work</a>
+    </ol>
+    <ol>
+      <a
+        routerLink="/"
+        [queryParams]="{ category: 'other' }"
+        queryParamsHandling="merge">Other</a>
+    </ol>
+  </ul>
+</div>
 <!-- </nav> -->
