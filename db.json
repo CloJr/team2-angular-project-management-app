@@ -2,6 +2,7 @@
   "tasks": [
     {
       "text": "test1",
+      "day": "2021-08-19T17:59",
       "reminder": false,
       "completed": false,
       "category": "internal",
@@ -9,7 +10,7 @@
     },
     {
       "text": "test2",
-      "day": "",
+      "day": "2021-08-13T17:59",
       "reminder": false,
       "completed": false,
       "category": "general",
@@ -17,7 +18,7 @@
     },
     {
       "text": "test3",
-      "day": "",
+      "day": "2021-08-11T17:59",
       "reminder": false,
       "completed": false,
       "category": "other",
